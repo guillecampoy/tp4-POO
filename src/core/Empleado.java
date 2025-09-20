@@ -1,5 +1,8 @@
 package core;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Empleado {
     private int id;
     private String nombre;
@@ -63,11 +66,14 @@ public class Empleado {
 
     @Override
     public String toString() {
+        NumberFormat nf = NumberFormat.getNumberInstance(new Locale("es", "AR"));
+        nf.setMinimumFractionDigits(2);
+        nf.setMaximumFractionDigits(2);
         return "Empleado{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", puesto='" + puesto + '\'' +
-                ", salario=" + salario +
+                ", salario=" + nf.format(salario) +
                 '}';
     }
 
