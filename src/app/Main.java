@@ -8,10 +8,6 @@ import features.ListarEmpleados;
 
 import java.util.Scanner;
 
-/*
-Clase main, menú utilizada en el resto de las entregas
- */
-
 public class Main {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
