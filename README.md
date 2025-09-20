@@ -30,12 +30,8 @@ TP4-POO/
 │   ├── app/
 │   │   └── Main.java              # Clase con método main, crea y prueba empleados
 │   │
-│   ├── utils/
-│   │   └── UtilsColor.java        # Utilitarios para impresión con colores (opcional)
-│   │
-│   └── tests/
-│       └── EmpleadoTest.java      # Casos de prueba (opcional)
-│
+│   └── utils/
+│      └── UtilsColor.java        # Utilitarios para impresión con colores
 ├── README.md
 └── .gitignore
 ```
