@@ -33,9 +33,9 @@ public class Main {
     }
 
     private static void mostrarMenu() {
-        System.out.println("\n===============================================");
+        System.out.println("\n===========================================================");
         System.out.println("   Trabajo Práctico 4 - Programación Orientada a Objetos");
-        System.out.println("===============================================");
+        System.out.println("===========================================================");
         System.out.println("Seleccionae Caso de uso");
         System.out.println("1. Creación 3 empleados (1x completo, 2x nombre y puesto)");
         System.out.println("2. Creación empleado completo");

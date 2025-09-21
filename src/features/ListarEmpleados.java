@@ -11,6 +11,6 @@ public class ListarEmpleados implements Ejecutable {
         int cantEmpleados = Empleado.mostrarTotalEmpleados();
 
         //Muestra resultado
-        UtilsColor.imprimirBloque(ContextColor.SUCCESS, "Cantidad de empleados"+cantEmpleados,'n');
+        UtilsColor.imprimirBloque(ContextColor.SUCCESS, "Cantidad de empleados: "+cantEmpleados);
     }
 }
