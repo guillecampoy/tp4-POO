@@ -5,7 +5,7 @@ import core.Empleado;
 import utils.ContextColor;
 import utils.UtilsColor;
 
-public class ListarEmpleados implements Ejecutable {
+public class ListarCantidadEmpleados implements Ejecutable {
     @Override
     public void execute() {
         int cantEmpleados = Empleado.mostrarTotalEmpleados();

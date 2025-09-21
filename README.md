@@ -24,14 +24,21 @@ Implementar un **sistema de gestión de empleados** aplicando conceptos avanzado
 TP4-POO/
 ├── src/
 │   ├── core/
-│   │   ├── Empleado.java          # Clase principal con atributos, constructores y lógica
-│   │   └── Ejecutable.java        # Interfaz con método ejecutar()
+│   │   ├── Empleado.java                   # Clase principal con atributos, constructores y lógica
+│   │   └── Ejecutable.java                 # Interfaz con método ejecutar()
 │   │
 │   ├── app/
-│   │   └── Main.java              # Clase con método main, crea y prueba empleados
+│   │   └── Main.java                       # Clase con método main, crea y prueba empleados
+│   │
+│   ├── features/
+│   │   ├── CreacionEmpleadoCompleto.java   # Creación de empleado usando constructor con atributos completos.
+│   │   ├── CreacionEmpleadoSimpole.java    # Creación de empleado con construtor simplificado y dos atributos, utilización de mecanismos de auto generación y asignación de atributos
+│   │   ├── CreacionMultipleEmpleados.java  # Creación de 3 empleados realizando combinaciones de casos
+│   │   └── ListarCantidadEmpleados.java    # Utiliza método que accede a atributo estático con cantidad de empleados creados.
 │   │
 │   └── utils/
-│      └── UtilsColor.java        # Utilitarios para impresión con colores
+│      ├── ContextColor.java                # Enumerado para establecer contextos para mensajes
+│      └── UtilsColor.java                  # Utilitarios para impresión con colores
 ├── README.md
 └── .gitignore
 ```
@@ -53,20 +60,24 @@ TP4-POO/
     - Otro con solo nombre y puesto (id auto y salario por defecto).
 
 - Métodos:
-    - `actualizarSalario(double porcentaje)`
-    - `actualizarSalario(int cantidad)`
+    - `incrementarSalarioPorPorcentaje(double porcentaje)`
+    - `incrementarSalarioMontoFijo(double incremento)`
     - `toString()`
-    - `static mostrarTotalEmpleados()`
+    - `mostrarTotalEmpleados()`
+    - `buildId(String nombre, String posicion)`
+    - `double redondear2(double valor)`
 
 - Encapsulamiento con getters y setters.
 
 ---
 
-### Clase **Main**
-- Crea empleados con ambos constructores.
-- Aplica incrementos de salario.
-- Imprime cada objeto con `toString()`.
+### Clase **Main**, con menú que permite:
+- Crear empleados con ambos constructores, aplica incrementos.
+- Crear un usuario completo, da opción de esquema de aumento.
+- Crear usuario con constructor simplificado, da opción de esquema de aumento.
 - Muestra el total de empleados con el método estático.
+
+En todas las opciones se hace uso del método toString() del objeto para mostrar los resultados.
 
 ---
 
@@ -77,7 +88,7 @@ public interface Ejecutable {
 }
 ```
 
-Todas las clases principales podrán implementar esta interfaz para mantener consistencia en la ejecución.
+Todas las clases features (casos de uso) implementan esta interfaz para mantener consistencia en la ejecución.
 
 ---
 ✍️ **Autor:** Guillermo Campoy  

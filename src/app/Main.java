@@ -4,7 +4,7 @@ import core.*;
 import features.CreacionEmpleadoCompleto;
 import features.CreacionEmpleadoSimple;
 import features.CreacionMultipleEmpleados;
-import features.ListarEmpleados;
+import features.ListarCantidadEmpleados;
 
 import java.util.Scanner;
 
@@ -58,7 +58,7 @@ public class Main {
             case 1  -> new CreacionMultipleEmpleados();
             case 2  -> new CreacionEmpleadoCompleto();
             case 3  -> new CreacionEmpleadoSimple();
-            case 4  -> new ListarEmpleados();
+            case 4  -> new ListarCantidadEmpleados();
             default -> null;
         };
     }
